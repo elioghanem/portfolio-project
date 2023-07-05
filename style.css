@@ -58,15 +58,15 @@
         }
         
         .nav__link--anchor-primary {
-            background-color: #6030b1;
             padding: 8px 20px;
-            border-radius: 50px;
-            color: #fff;
-            transition: 300ms ease;
+            transition: all 1s ease;
         }
         
         .nav__link--anchor-primary:hover {
             background-color: #5d3eff;
+            border-radius: 50px;
+            color: #fff;
+            background-color: #6030b1;
         }
         
         .flex {
@@ -144,7 +144,7 @@
             line-height: 1.5;
         }
         
-        .about-me__links {
+        .about-me__link {
             font-size: 20px;
             color: #242424;
             text-decoration: none;
