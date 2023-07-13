@@ -483,13 +483,15 @@
         resize: none;
     }
     
-    .contactForm .inputBox input[type="submit"] {
+    .contactForm .inputBox .input {
         background: #636161;
         transition: 300ms ease;
         cursor: pointer;
+        width: 100%;
+        height: 50px;
     }
     
-    .contactForm .inputBox input[type="submit"]:hover {
+    .contactForm .inputBox .input:hover {
         background: #373737;
         font-weight: bold;
         color: #fff;
