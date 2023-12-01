@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>Portofolio</title>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="burger_menu.js"></script>
 </head>
 
 <body>
@@ -34,6 +35,25 @@
                 </li>
             </ul>
         </nav>
+        <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars "></i>
+        </button>
+        <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close " onclick="closeMenu() ">
+                <i class="fas fa-times "></i>
+            </button>
+            <ul class="menu__links">
+                <li class="menu__list1">
+                    <a href="#languages" class="menu__link">Languages</a>
+                </li>
+                <li class="menu__list">
+                    <a href="#projects" class="menu__link">Projects</a>
+                </li class="menu__link">
+                <li class="menu__list">
+                    <a href="#contact" class="menu__link">Contact</a>
+                </li>
+            </ul>
+        </div>
         <div class="flex flex-1">
             <div class="about-me__info row">
                 <div class="about-me__info--container">
@@ -99,7 +119,7 @@
                             <div class="project__description">
                                 <h3 class="project__description--title">E-commerce project</h3>
                                 <h4 class="project__description--sub-title">HTML,CSS</h4>
-                                <p class="project__description--para">this website is the first official website I build to practice HTML and CSS. It contains add to cart feature(but without the addition of using js) and contains many author's feater-like products.</p>
+                                <p class="project__description--para">this website is the first official website I build to practice HTML and CSS. It contains add to cart feature(but without the addition of using js) and contains many other feater-like products.</p>
                                 <div class="project__description--links">
                                     <a href="https://github.com/elioghanem/Ecom-project.git" target="_blank" class=" project__description--link "><i class="fab fa-github "></i></a>
                                     <a href="./notfind.html" target="_blank" class="project__description--link "><i class="fas fa-link "></i></a>
@@ -107,43 +127,59 @@
                             </div>
                         </div>
                     </li>
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <img src="./img portofolio/botton and links animation.png" class="project__img" alt=" ">
-                            <div class="project__description">
-                                <h3 class="project__description--title">Botton and link animation</h3>
-                                <h4 class="project__description--sub-title">HTML,CSS</h4>
-                                <p class="project__description--para">this home page is about, animation my button makes the background color move from left and right when I hover, and when I hover on the link makes a smooth line appear from the left to the right.</p>
-                                <div class="project__description--links">
-                                    <a href="https://github.com/elioghanem/button-animation-project.git" target="_blank" class=" project__description--link "><i class="fab fa-github "></i></a>
-                                    <a href="./notfind.html" target="_blank" class="project__description--link "><i class="fas fa-link "></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <img src="./img portofolio/login page project.png" class="project__img" alt=" ">
-                            <div class="project__description">
-                                <h3 class="project__description--title">Login page project</h3>
-                                <h4 class="project__description--sub-title">HTML,CSS</h4>
-                                <p class="project__description--para">this login page contains an animation for the submit button and when we press the male or female button the font size and font-weight increase.</p>
-                                <div class="project__description--links">
-                                    <a href="https://github.com/elioghanem/login-project.git" target="_blank" class=" project__description--link "><i class="fab fa-github "></i></a>
-                                    <a href="./notfind.html" target="_blank" class="project__description--link "><i class="fas fa-link "></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+
                     <li class="project">
                         <div class="project__wrapper">
                             <img src="./img portofolio/e-com-book-project.png" class="project__img" alt=" ">
                             <div class="project__description">
                                 <h3 class="project__description--title">Ecommerce Book.</h3>
                                 <h4 class="project__description--sub-title">HTML,CSS,JS</h4>
-                                <p class="project__description--para">This E-com website is one page. I used HTML and CSS and a little bit of JS..</p>
+                                <p class="project__description--para">This E-com website is one page. I used HTML and CSS and a little bit of JavaScript.</p>
                                 <div class="project__description--links">
                                     <a href="https://github.com/elioghanem/e-com-book-project.git" target="_blank" class=" project__description--link "><i class="fab fa-github "></i></a>
+                                    <a href="./notfind.html" target="_blank" class="project__description--link "><i class="fas fa-link "></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./img portofolio/treatproject.png" class="project__img">
+                            <div class="project__description">
+                                <h3 class="project__description--title">T-react project</h3>
+                                <h4 class="project__description--sub-title">HTML,CSS,JS</h4>
+                                <p class="project__description--para">first website clone.Fully responsive</p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/elioghanem/treact-clone-project.git" target="_blank" class=" project__description--link "><i class="fab fa-github "></i></a>
+                                    <a href="./notfind.html" target="_blank" class="project__description--link "><i class="fas fa-link "></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./img portofolio/anthonysclone.png" class="project__img">
+                            <div class="project__description">
+                                <h3 class="project__description--title">Anthony's clone</h3>
+                                <h4 class="project__description--sub-title">HTML,CSS,JS</h4>
+                                <p class="project__description--para">A clone of a locally popular restaurant.</p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/elioghanem/anthony-s-clone.git" target="_blank" class=" project__description--link "><i class="fab fa-github "></i></a>
+                                    <a href="./notfind.html" target="_blank" class="project__description--link "><i class="fas fa-link "></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./img portofolio/household.png" class="project__img">
+                            <div class="project__description">
+                                <h3 class="project__description--title">House hold e-com</h3>
+                                <h4 class="project__description--sub-title">HTML,CSS,JS</h4>
+                                <p class="project__description--para">this website was my first website who I have created and sold to a customer the design was from his designer and it's not responsive.</p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/elioghanem/HouseHold-ecom.git" target="_blank" class=" project__description--link "><i class="fab fa-github "></i></a>
                                     <a href="./notfind.html" target="_blank" class="project__description--link "><i class="fas fa-link "></i></a>
                                 </div>
                             </div>
